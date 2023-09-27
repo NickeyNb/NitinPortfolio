@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${server}/contacts/send-message`,
+        `https://nbportfolioserver.onrender.com/api/v1/contacts/send-message`,
         { name, email, message },
 
         {
