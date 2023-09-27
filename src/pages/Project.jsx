@@ -3,6 +3,11 @@ import Layout from "../components/layout/Layout";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { BsChat, BsChatFill, BsFillSkipStartCircleFill } from "react-icons/bs";
+import weather from "../assets/Weather.png";
+import expense from "../assets/Expense.png";
+import doctor from "../assets/Doctor.png";
+import chitchat from "../assets/ChitChat.png";
+import ecomm from "../assets/Ecomm.png";
 const Project = () => {
   return (
     <Layout>
@@ -22,11 +27,7 @@ const Project = () => {
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Expense-Flow</h1>
                 <div className="flex justify-center ">
-                  <img
-                    src="/src/assets/Expense.png"
-                    className="mb-2 w-60 "
-                    alt=""
-                  />
+                  <img src={expense} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>
@@ -80,11 +81,7 @@ const Project = () => {
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Apni-Market</h1>
                 <div className="flex justify-center ">
-                  <img
-                    src="/src/assets/Ecomm.png"
-                    className="mb-2 w-60 "
-                    alt=""
-                  />
+                  <img src={ecomm} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>
@@ -139,11 +136,7 @@ const Project = () => {
               <div className="shadow-300-950 flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg duration-100 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">My-care</h1>
                 <div className="flex justify-center ">
-                  <img
-                    src="/src/assets/Doctor.png"
-                    className="mb-2 w-60 "
-                    alt=""
-                  />
+                  <img src={doctor} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>
@@ -198,11 +191,7 @@ const Project = () => {
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Chit-Chat</h1>
                 <div className="flex justify-center ">
-                  <img
-                    src="/src/assets/ChitChat.png"
-                    className="mb-2 w-60 "
-                    alt=""
-                  />
+                  <img src={chitchat} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>
@@ -257,11 +246,7 @@ const Project = () => {
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Weather-App</h1>
                 <div className="flex justify-center ">
-                  <img
-                    src="/src/assets/Weather.png"
-                    className="mb-2 w-60 "
-                    alt=""
-                  />
+                  <img src={weather} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
 import { RiCloseLine, RiCrossLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
-
+import resume from "../assets/NitinResume.pdf";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -32,9 +32,9 @@ const Header = () => {
               <ul className=" flex w-full flex-col justify-between space-y-4 py-4 text-center text-lg tracking-normal">
                 <li>
                   <NavLink
-                    to={"/src/assets/NitinResume.pdf"}
+                    to={resume}
                     target="_blank"
-                    download="NitinResume.pdf"
+                    download={resume}
                     className="hover:text-rose-600"
                   >
                     Resume

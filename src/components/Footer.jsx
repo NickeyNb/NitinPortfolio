@@ -6,6 +6,7 @@ import {
   AiFillLinkedin,
   AiFillWechat,
 } from "react-icons/ai";
+import logo from "../assets/mainLogo.png";
 const Footer = () => {
   return (
     <footer className="bg-gray-950 text-indigo-200">
@@ -17,11 +18,7 @@ const Footer = () => {
               to="https://nickeynb.github.io/PortfolioNitin/"
               target="_blank"
             >
-              <img
-                className="w-24"
-                src="/src/assets/mainLogo.png"
-                alt="Nitin Nb Logo"
-              />
+              <img className="w-24" src={logo} alt="Nitin Nb Logo" />
             </Link>
           </div>
           <div className="midFooter border-r border-solid border-white text-center md:flex md:w-3/5 md:flex-col md:items-center md:justify-center">

@@ -10,6 +10,8 @@ import {
   AiFillWechat,
 } from "react-icons/ai";
 import me from "../assets/me.png";
+import resume from "../assets/NitinResume.pdf";
+
 const Home = () => {
   return (
     <Layout>
@@ -65,9 +67,9 @@ const Home = () => {
               </div>
               <div className="order-4 mt-8 md:mt-8">
                 <NavLink
-                  to={"/src/assets/NitinResume.pdf"}
+                  to={resume}
                   target="_blank"
-                  download="NitinResume.pdf"
+                  download={resume}
                   className=" rounded-lg border border-solid border-white bg-rose-600 px-4 py-2 font-semibold tracking-normal hover:bg-rose-700 "
                 >
                   Download CV
