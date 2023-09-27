@@ -59,7 +59,7 @@ const Header = () => {
             </nav>
           ) : null}
           <div className="order-2  text-2xl font-semibold uppercase tracking-normal text-rose-500 md:order-1 md:w-1/5 md:pl-0">
-            <NavLink to={"/src/assets/ResumeNitin.pdf"} target="_blank">
+            <NavLink to={resume} target="_blank">
               Nitin
             </NavLink>
           </div>
