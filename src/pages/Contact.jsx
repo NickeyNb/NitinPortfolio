@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <Layout>
       <main className="bg-gray-800 text-indigo-100">
-        <section className="loginBody flex min-h-[80vh] w-full items-center justify-center">
+        <section className="loginBody flex min-h-[95vh] w-full items-center justify-center">
           <div className="border-1 m-4 flex  w-full  max-w-md items-center justify-center rounded  pt-4">
             <div className="w-full">
               <div className="about">
