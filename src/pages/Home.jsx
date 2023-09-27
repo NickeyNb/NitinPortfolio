@@ -9,6 +9,7 @@ import {
   AiFillLinkedin,
   AiFillWechat,
 } from "react-icons/ai";
+import me from "../assets/me.png";
 const Home = () => {
   return (
     <Layout>
@@ -77,7 +78,7 @@ const Home = () => {
             <div className="order-1 flex items-center justify-center px-2 md:order-2 md:pr-20 lg:pr-48">
               <img
                 className="w-80 rounded-full"
-                src={"/src/assets/me.png"}
+                src={me}
                 alt="Nitin Profile Photo"
               />
             </div>
