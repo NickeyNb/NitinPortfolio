@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <Layout>
       <main className="bg-gray-800 text-indigo-100">
-        <section className="loginBody flex min-h-[85vh] items-center justify-center md:pb-4">
+        <section className="loginBody flex min-h-[80vh] w-full items-center justify-center">
           <div className="border-1 m-4 flex  w-full  max-w-md items-center justify-center rounded  pt-4">
             <div className="w-full">
               <div className="about">
@@ -91,58 +91,6 @@ const Contact = () => {
                   </NavLink>
                 </div>
                 <div className="rightLogin space-y-1">
-                  <form
-                    className=" space-y-3 rounded-lg border-l-2 border-r-2 border-solid border-gray-400 px-3 py-4"
-                    onSubmit={sendMessageHandler}
-                  >
-                    <div className=" border-b border-solid border-black">
-                      <input
-                        className="w-full rounded-md border-none  px-1 py-1  text-black outline-none"
-                        type="text"
-                        placeholder="Enter your Name"
-                        value={name}
-                        autoComplete="username email"
-                        required
-                        onChange={(e) => {
-                          setName(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div className=" border-b border-solid border-black">
-                      <input
-                        className="w-full rounded-md  border-none px-1 py-1  text-black outline-none"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        autoComplete="username email"
-                        required
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                        }}
-                      />
-                    </div>
-                    <div className="">
-                      <textarea
-                        name=""
-                        id=""
-                        cols="30"
-                        rows="3"
-                        className="w-full resize-none rounded-md border border-solid border-black px-1 py-1   text-black outline-none "
-                        placeholder="Enter the Message"
-                        required
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                      />
-                    </div>
-                    <div>
-                      <button
-                        className="mt-1 w-full rounded border border-solid  border-rose-700 bg-rose-600 py-2 text-lg font-bold text-slate-100 hover:bg-rose-700"
-                        type="submit"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </form>
                   <form
                     className=" space-y-3 rounded-lg border-l-2 border-r-2 border-solid border-gray-400 px-3 py-4"
                     onSubmit={sendMessageHandler}
