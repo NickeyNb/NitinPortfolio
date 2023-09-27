@@ -48,8 +48,8 @@ const Contact = () => {
   return (
     <Layout>
       <main className="bg-gray-800 text-indigo-100">
-        <section className="loginBody flex items-center justify-center md:pb-4">
-          <div className="border-1 m-4 flex min-h-[80vh] w-full  max-w-md items-center justify-center rounded  pt-4">
+        <section className="loginBody flex min-h-[80vh] items-center justify-center md:pb-4">
+          <div className="border-1 m-4 flex  w-full  max-w-md items-center justify-center rounded  pt-4">
             <div className="w-full">
               <div className="about">
                 <p className="mb-4  text-center text-xl font-semibold uppercase tracking-normal text-white md:text-2xl">
