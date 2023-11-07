@@ -85,7 +85,7 @@ const Project = () => {
               </div>
 
               {/* Apni-Market */}
-              {/* <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
+              <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Apni-Market</h1>
                 <div className="flex justify-center ">
                   <img src={ecomm} className="mb-2 w-60 " alt="" />
@@ -139,7 +139,7 @@ const Project = () => {
                     <Link to="/contact-me"> Feedback </Link>
                   </button>
                 </div>
-              </div> */}
+              </div>
 
               {/* My-Care */}
               {/* <div className="shadow-300-950 flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg duration-100 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
