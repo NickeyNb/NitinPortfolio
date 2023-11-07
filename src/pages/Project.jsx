@@ -23,7 +23,9 @@ const Project = () => {
                 </span>
               </h1>
             </div>
+            {/* Projects */}
             <div className="grid grid-cols-1 gap-x-6 gap-y-6 px-8 pt-12 sm:grid-cols-2 md:px-16 lg:grid-cols-3">
+              {/* Expense-Flow */}
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Expense-Flow</h1>
                 <div className="flex justify-center ">
@@ -46,7 +48,7 @@ const Project = () => {
                     <FaGithub />
                   </Link>
                   <Link
-                    to={"https://github.com/NickeyNb"}
+                    to={"https://expense-flow.vercel.app/"}
                     target="_blank"
                     className="rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700"
                   >
@@ -67,7 +69,10 @@ const Project = () => {
                     </Link>
                   </button>
                   <button className="rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700">
-                    <Link to={"https://github.com/NickeyNb"} target="_blank">
+                    <Link
+                      to={"https://expense-flow.vercel.app/"}
+                      target="_blank"
+                    >
                       {" "}
                       Demo{" "}
                     </Link>
@@ -78,7 +83,9 @@ const Project = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
+
+              {/* Apni-Market */}
+              {/* <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Apni-Market</h1>
                 <div className="flex justify-center ">
                   <img src={ecomm} className="mb-2 w-60 " alt="" />
@@ -132,8 +139,10 @@ const Project = () => {
                     <Link to="/contact-me"> Feedback </Link>
                   </button>
                 </div>
-              </div>
-              <div className="shadow-300-950 flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg duration-100 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
+              </div> */}
+
+              {/* My-Care */}
+              {/* <div className="shadow-300-950 flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg duration-100 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">My-care</h1>
                 <div className="flex justify-center ">
                   <img src={doctor} className="mb-2 w-60 " alt="" />
@@ -187,8 +196,10 @@ const Project = () => {
                     <Link to="/contact-me"> Feedback </Link>
                   </button>
                 </div>
-              </div>
-              <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
+              </div> */}
+
+              {/* Chit-Chat */}
+              {/* <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Chit-Chat</h1>
                 <div className="flex justify-center ">
                   <img src={chitchat} className="mb-2 w-60 " alt="" />
@@ -242,7 +253,7 @@ const Project = () => {
                     <Link to="/contact-me"> Feedback </Link>
                   </button>
                 </div>
-              </div>
+              </div> */}
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Weather-App</h1>
                 <div className="flex justify-center ">

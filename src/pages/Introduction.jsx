@@ -42,7 +42,7 @@ const Introduction = () => {
               I like making things on the internet, especially using tools like
               <span className="text-lg  italic text-rose-500">
                 {" "}
-                ReactJS, Readux, Next.js, Expressjs, etc{" "}
+                Nextjs, Reactjs Tailwindcss, Typescript, etc{" "}
               </span>
               .
             </h1>

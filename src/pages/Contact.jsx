@@ -97,7 +97,7 @@ const Contact = () => {
                   >
                     <div className=" border-b border-solid border-black">
                       <input
-                        className="w-full rounded-md border-none  px-1 py-1  text-black outline-none"
+                        className="w-full rounded-md border-none  px-2 py-2  text-black outline-none"
                         type="text"
                         placeholder="Enter your Name"
                         value={name}
@@ -110,7 +110,7 @@ const Contact = () => {
                     </div>
                     <div className=" border-b border-solid border-black">
                       <input
-                        className="w-full rounded-md  border-none px-1 py-1  text-black outline-none"
+                        className="w-full rounded-md  border-none px-2 py-2  text-black outline-none"
                         type="email"
                         placeholder="Enter your email"
                         value={email}
@@ -127,7 +127,7 @@ const Contact = () => {
                         id=""
                         cols="30"
                         rows="3"
-                        className="w-full resize-none rounded-md border border-solid border-black px-1 py-1   text-black outline-none "
+                        className="w-full resize-none rounded-md border border-solid border-black px-2 py-1   text-black outline-none "
                         placeholder="Enter the Message"
                         required
                         value={message}
