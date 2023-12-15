@@ -16,12 +16,14 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
   // send message handler
   const sendMessageHandler = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const res = await axios.post(
         `https://nbportfolioserver.onrender.com/api/v1/contacts/send-message`,
@@ -36,13 +38,25 @@ const Contact = () => {
       );
       const isSucc = res.data.success;
       if (isSucc) {
+        setIsLoading(false);
         toast.success(res.data.message);
+        setName("");
+        setEmail("");
+        setMessage("");
         navigate("/");
       } else {
+        setIsLoading(false);
         toast.error("Some error");
+        setName("");
+        setEmail("");
+        setMessage("");
       }
     } catch (error) {
       toast.error("Can't send now !");
+      setIsLoading(false);
+      setName("");
+      setEmail("");
+      setMessage("");
     }
   };
   return (
@@ -136,8 +150,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <button
-                        className="mt-1 w-full rounded border border-solid  border-rose-700 bg-rose-600 py-2 text-lg font-bold text-slate-100 hover:bg-rose-700"
                         type="submit"
+                        disabled={isLoading}
+                        className="mt-1 w-full rounded border border-solid border-rose-700 bg-rose-600  py-2 text-lg font-bold text-slate-100 hover:bg-rose-700 disabled:cursor-not-allowed disabled:bg-rose-400"
                       >
                         Send Message
                       </button>

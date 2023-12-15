@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="leftFooter hidden  w-1/5  md:inline-flex md:border-r md:border-white">
             <Link
               className="flex w-full items-center justify-center"
-              to="https://nickeynb.github.io/PortfolioNitin/"
+              to="https://nitin-portfolio-coral.vercel.app/"
               target="_blank"
             >
               <img className="w-24" src={logo} alt="Nitin Nb Logo" />

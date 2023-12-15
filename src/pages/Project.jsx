@@ -8,6 +8,7 @@ import expense from "../assets/Expense.png";
 import doctor from "../assets/Doctor.png";
 import chitchat from "../assets/ChitChat.png";
 import ecomm from "../assets/Ecomm.png";
+
 const Project = () => {
   return (
     <Layout>
@@ -17,10 +18,14 @@ const Project = () => {
             <div className="pt-8">
               <h1 className="text-center text-xl font-semibold uppercase tracking-normal text-white md:text-3xl">
                 My recent{" "}
-                <span className="font-semibold tracking-wider text-rose-600">
+                <Link
+                  to={"https://github.com/NickeyNb"}
+                  target={"_blank"}
+                  className="font-semibold tracking-wider text-rose-600 hover:text-rose-700"
+                >
                   {" "}
                   Projects
-                </span>
+                </Link>
               </h1>
             </div>
             {/* Projects */}

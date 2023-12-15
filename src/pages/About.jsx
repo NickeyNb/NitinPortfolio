@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiGitBranch } from "react-icons/bi";
-import { FaCss3Alt } from "react-icons/fa";
+import { FaCss3Alt, FaRust } from "react-icons/fa";
 import {
   TbBrandJavascript,
   TbBrandNodejs,
@@ -101,22 +101,27 @@ const About = () => {
                 </span>
               </h1>
               <div className="grid grid-cols-1 gap-x-4 gap-y-4 px-8 pt-12 sm:grid-cols-2   md:grid-cols-3">
-                <div className="rounded-lg bg-gray-800  px-2 py-1  shadow-md shadow-gray-500 hover:bg-gray-900">
+                <div className="rounded-lg bg-gray-800  px-2 py-1  shadow-md shadow-gray-500 hover:bg-gray-900 ">
+                  <Link
+                    to={"https://github.com/NickeyNb/rust-in-rust"}
+                    target="_blank"
+                    className="pt-2"
+                  >
+                    <FaRust className="w-full text-center text-6xl text-red-600 " />
+                  </Link>
+                  <p className="px-1 py-2">
+                    Rust is a blazing fast and memory-efficient static compiled
+                    language with a rich type system and ownership model.
+                  </p>
+                </div>
+                <div className="rounded-lg  bg-gray-800 px-2 py-1 shadow-md shadow-gray-500 hover:bg-gray-900">
                   <Link
                     to={"https://leetcode.com/nitinnb31122002/"}
                     target="_blank"
+                    className="pt-2"
                   >
-                    <TbBrandCpp className="w-full text-center text-6xl text-purple-600 " />
-                  </Link>
-                  <p className="px-1 py-2">
-                    C++ is a powerful programming language commonly used for
-                    system-level programming.
-                  </p>
-                </div>
-                <div className="rounded-lg  bg-gray-800 px-2 py-1 shadow-md shadow-gray-500">
-                  <i className="pt-2">
                     <TbBrandJavascript className="w-full text-center text-6xl text-yellow-500" />
-                  </i>
+                  </Link>
                   <p className="px-1 py-2">
                     JavaScript is a versatile programming language used for web
                     development to add functionality to websites.

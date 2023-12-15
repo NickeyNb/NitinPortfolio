@@ -59,12 +59,10 @@ const Header = () => {
             </nav>
           ) : null}
           <div className="order-2  text-2xl font-semibold uppercase tracking-normal text-rose-500 md:order-1 md:w-1/5 md:pl-0">
-            <NavLink to={resume} target="_blank">
-              Nitin
-            </NavLink>
+            <Link to={"/"}>Nitin</Link>
           </div>
           <nav className="order-2 hidden  md:flex md:w-3/5">
-            <ul className="flex w-full justify-between">
+            <ul className="flex w-full justify-between text-lg">
               <li className="">
                 <NavLink to={"/"} className="hover:text-rose-600">
                   Home
@@ -83,11 +81,14 @@ const Header = () => {
             </ul>
           </nav>
           <div className="order-3  flex justify-end  md:w-1/5">
-            <button className="rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700">
-              <Link to={"/contact-me"} className="w-full">
-                Contact
-              </Link>
-            </button>
+            <Link
+              to={"/contact-me"}
+              className=" rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700"
+            >
+              {/* <button className="rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700"> */}
+              Contact
+              {/* </button> */}
+            </Link>
           </div>
         </div>
       </section>
