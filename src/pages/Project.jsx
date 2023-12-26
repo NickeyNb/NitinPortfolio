@@ -204,18 +204,16 @@ const Project = () => {
               </div> */}
 
               {/* Chit-Chat */}
-              {/* <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
+              <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Chit-Chat</h1>
                 <div className="flex justify-center ">
                   <img src={chitchat} className="mb-2 w-60 " alt="" />
                 </div>
                 <div>
                   <p>
-                    Developing the the Real-Time Chat Application with
-                    integrated AI Bot using the MERN stack and Socket.io enables
-                    users to engage in real-time chat conversations with each
-                    other while also enjoying the benefits of an AI bot's
-                    assistance and interactivity
+                    Developed the the Real-Time Chat Application using the
+                    Next.js, Typescript and Pusher which enable users to engage
+                    in real-time chat conversations with each other.
                   </p>
                 </div>
                 <div className="mt-3 flex justify-around md:hidden">
@@ -258,7 +256,7 @@ const Project = () => {
                     <Link to="/contact-me"> Feedback </Link>
                   </button>
                 </div>
-              </div> */}
+              </div>
               <div className="flex flex-col justify-between rounded-lg bg-gray-900 px-4 pb-4 pt-2 shadow-lg shadow-gray-950 duration-300 ease-in-out hover:-translate-y-2 hover:shadow-gray-600">
                 <h1 className="mb-1 text-center text-xl">Weather-App</h1>
                 <div className="flex justify-center ">
