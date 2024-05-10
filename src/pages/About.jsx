@@ -304,4 +304,15 @@ const About = () => {
   );
 };
 
+const AboutBox = ({ linkTo, Icon, paragraph }) => {
+  return (
+    <div className="rounded-lg  bg-gray-800 px-2 py-1 shadow-md shadow-gray-500 hover:bg-gray-900">
+      <Link to={linkTo} target="_blank" className="pt-2">
+        <Icon className="w-full text-center text-6xl text-yellow-500" />
+      </Link>
+      <p className="px-1 py-2">{paragraph}</p>
+    </div>
+  );
+};
+
 export default About;
