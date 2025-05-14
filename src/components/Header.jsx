@@ -1,97 +1,178 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaHamburger } from "react-icons/fa";
-import { RiCloseLine, RiCrossLine } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import resume from "../assets/NitinResume.pdf";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const [scrolled, setScrolled] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-10 bg-gray-950">
-      <section className="text-white">
-        <div className="relative flex items-center justify-between px-8 py-4">
-          {/* Hamburger or cross */}
-          <div
-            className="order-1 cursor-pointer space-y-0.5 md:hidden "
-            onClick={toggleMenu}
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-gray-900/95 shadow-lg backdrop-blur-sm" : "bg-gray-950"
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="relative flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link
+            to="/"
+            className="text-2xl font-bold uppercase tracking-wider text-rose-500 transition hover:text-rose-400"
+            onClick={closeMenu}
           >
-            {menuOpen ? (
-              <div>
-                <RiCloseLine className="text-2xl" />
-              </div>
-            ) : (
-              <div>
-                <FaHamburger className="text-2xl" />
-              </div>
-            )}
-          </div>
-          {menuOpen ? (
-            <nav className="absolute left-0 top-16 w-full bg-gray-900 md:hidden">
-              <ul className=" flex w-full flex-col justify-between space-y-4 py-4 text-center text-lg tracking-normal">
-                <li>
-                  <NavLink
-                    to={resume}
-                    target="_blank"
-                    download={resume}
-                    className="hover:text-rose-600"
-                  >
-                    Resume
-                  </NavLink>
-                </li>
-                <li className="">
-                  <NavLink to={"/"} className="hover:text-rose-600">
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/about-me"} className="hover:text-rose-600">
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/my-projects"} className="hover:text-rose-600">
-                    Projects
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
-          ) : null}
-          <div className="order-2  text-2xl font-semibold uppercase tracking-normal text-rose-500 md:order-1 md:w-1/5 md:pl-0">
-            <Link to={"/"}>Nitin</Link>
-          </div>
-          <nav className="order-2 hidden  md:flex md:w-3/5">
-            <ul className="flex w-full justify-between text-lg">
-              <li className="">
-                <NavLink to={"/"} className="hover:text-rose-600">
+            Nitin
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:block">
+            <ul className="flex space-x-8">
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `text-lg font-medium transition hover:text-rose-500 ${
+                      isActive ? "text-rose-500" : "text-white"
+                    }`
+                  }
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/about-me"} className="hover:text-rose-600">
+                <NavLink
+                  to="/about-me"
+                  className={({ isActive }) =>
+                    `text-lg font-medium transition hover:text-rose-500 ${
+                      isActive ? "text-rose-500" : "text-white"
+                    }`
+                  }
+                >
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/my-projects"} className="hover:text-rose-600">
+                <NavLink
+                  to="/my-projects"
+                  className={({ isActive }) =>
+                    `text-lg font-medium transition hover:text-rose-500 ${
+                      isActive ? "text-rose-500" : "text-white"
+                    }`
+                  }
+                >
                   Projects
                 </NavLink>
               </li>
+              <li>
+                <a
+                  href={resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-medium text-white transition hover:text-rose-500"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </nav>
-          <div className="order-3  flex justify-end  md:w-1/5">
-            <Link
-              to={"/contact-me"}
-              className=" rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700"
-            >
-              {/* <button className="rounded-md  border border-solid border-white bg-rose-600 px-2 py-1 text-end hover:bg-rose-700"> */}
-              Contact
-              {/* </button> */}
-            </Link>
-          </div>
+
+          {/* Contact Button */}
+          <Link
+            to="/contact-me"
+            className="hidden rounded-md border border-rose-600 bg-rose-600/10 px-4 py-2 font-medium text-white transition hover:bg-rose-600 hover:text-white md:block"
+          >
+            Contact
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="text-2xl text-white md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <RiCloseLine /> : <FaHamburger />}
+          </button>
+
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <div className="absolute left-0 top-16 w-full bg-gray-900/95 backdrop-blur-md md:hidden">
+              <ul className="flex flex-col space-y-4 p-6 text-center">
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      `block py-2 text-lg font-medium transition hover:text-rose-500 ${
+                        isActive ? "text-rose-500" : "text-white"
+                      }`
+                    }
+                    onClick={closeMenu}
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/about-me"
+                    className={({ isActive }) =>
+                      `block py-2 text-lg font-medium transition hover:text-rose-500 ${
+                        isActive ? "text-rose-500" : "text-white"
+                      }`
+                    }
+                    onClick={closeMenu}
+                  >
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/my-projects"
+                    className={({ isActive }) =>
+                      `block py-2 text-lg font-medium transition hover:text-rose-500 ${
+                        isActive ? "text-rose-500" : "text-white"
+                      }`
+                    }
+                    onClick={closeMenu}
+                  >
+                    Projects
+                  </NavLink>
+                </li>
+                <li>
+                  <a
+                    href={resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 text-lg font-medium text-white transition hover:text-rose-500"
+                    onClick={closeMenu}
+                  >
+                    Resume
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    to="/contact-me"
+                    className="mx-auto block w-fit rounded-md border border-rose-600 bg-rose-600/10 px-4 py-2 font-medium text-white transition hover:bg-rose-600 hover:text-white"
+                    onClick={closeMenu}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
-      </section>
+      </div>
     </header>
   );
 };
